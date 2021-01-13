@@ -1,0 +1,37 @@
+<!--Crear una página con fondo negro y un cuadro de texto centrado en la misma con el contenido
+“Situarse en el cuadro para insertar imagen”, de forma que cada vez que entremos al cuadro de
+texto, cargará una imagen aleatoria del servicio gratuito umplash (para ello, basta con usar
+“url(‘https://source.unsplash.com/ramdom’)” que sustituya al fondo negro.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+            margin-top: 20%;
+            margin-left: 40%;
+        }
+        div{
+            text-align: center;
+            background-color: cadetblue;
+            width: 100px;
+            height: 100px;
+        }
+        
+    </style>
+</head>
+<body id="body">
+    <div id="foto" onmouseover="cargarImagen()">Mueve el ratón aquí para cargar la foto</div>
+    <script>
+        function cargarImagen(){
+          console.log("he ganado el foco");
+          var body = document.getElementById("body");
+          body.style.backgroundImage = "url('https://source.unsplash.com/random')";
+        }
+    </script>    
+</body>
+</html>

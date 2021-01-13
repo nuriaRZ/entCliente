@@ -1,0 +1,38 @@
+<!--5) Sabiendo la letra de un Documento Nacional de Identidad (DNI) se obtiene del resto de la
+división entera del número de DNI entre 23, y accediendo con ese resto a la posición del
+siguiente array de letras (comenzando en la posición 0):
+letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+a) Pedir un número de DNI al usuario y calcular su letra.-->
+<!DOCTYPE html>
+<html>
+<body> 
+    
+
+<script>
+   
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']; 
+   
+   var dni = parseInt(prompt("Introduce tu dni sin letra"));
+
+   var resto = dni % 23;
+   buscarLetra();
+        
+
+    
+    
+    function buscarLetra() {
+        for (let i = 0; i < letras.length; i++) {
+            if(i == resto){
+                alert("La letra de tu DNI es : "+ letras[i]); 
+            } 
+                     
+        } 
+    }
+
+
+
+</script>
+
+
+</body>
+</html> 

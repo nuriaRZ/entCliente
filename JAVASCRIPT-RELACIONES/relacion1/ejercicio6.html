@@ -1,0 +1,31 @@
+<!--Realizar un documento html con código javascript que pida en un cuadro de texto de un formulario un número
+del 2 al 9, de forma que al darle a un botón llamado mostrar, muestre la tabla de multiplicar de dicho numero.-->
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<form>
+    Introduzca un numero: <input type="text" name="number" id="number"><br>
+    <input type="submit" value="Mostrar" onclick="myFunction()">
+</form>
+
+    
+
+
+<script>    
+    function myFunction(){
+        let number = parseInt(document.getElementById("number").value);
+        document.write("<h2>TABLA DE MULTIPLICAR</h2>")
+        for (let i = 0; i < 10; i++) {
+             let result = number * i;
+             document.write(number*i +"<br>");            
+        }
+       
+    }
+
+</script>
+
+
+</body>
+</html> 

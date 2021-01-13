@@ -1,0 +1,63 @@
+<!--Hará lo mismo que antes salvo que en este caso habrá dos cuadros de texto y dos botones:
+botón insertar y botón cancelar, de forma que en el primer cuadro de texto introduciremos el
+contenido y en el segundo el número de orden. Si pulsamos “insertar” se realizará de forma
+correcta la inserción del párrafo en su número de orden y desaparecerán los botones y los
+cuadros de texto, mientras que, si pulsamos “cancelar”, se resetearán los cuadros de texto y no
+se realizará la operación, manteniendo los botones por si queremos intentarlo de nuevo.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nisi praesentium neque voluptates eius sapiente suscipit sit quod porro veniam, voluptate aliquid dolorum quos culpa velit, ipsum dicta facere rem.</li>
+        <li>Fugit, aliquam unde asperiores eos quos maxime fuga earum consectetur iure necessitatibus praesentium quo blanditiis maiores id culpa, esse itaque doloribus vitae nesciunt vero. Deserunt maiores quasi sapiente maxime magnam!</li>
+        <li>Magni perspiciatis exercitationem non quam id porro ad sit perferendis beatae, inventore cupiditate harum numquam rerum placeat delectus est provident? Rem, corrupti possimus saepe voluptatem perferendis sapiente omnis quidem cupiditate?</li>
+        <li>Esse culpa officia delectus odit. Dolorem voluptates consequatur, dolores, nesciunt placeat sint corrupti aperiam, quis possimus aut explicabo expedita dolor itaque. Corrupti voluptates est amet aliquid iste dolore explicabo tempora.</li>
+        <li>Necessitatibus maxime architecto eligendi est hic corrupti delectus aliquam aut, a sit enim mollitia minima modi nulla doloremque iure ipsum sapiente nemo magnam tempora assumenda quod! Minus quidem quo eius.</li>
+        <li>Accusamus commodi sint nobis enim sequi, in vero consequuntur, ipsam, cum ab voluptatibus officia facilis optio odio atque deleniti sed ullam fuga. Ab neque quasi ut, accusamus dolore nihil cum?</li>
+        <li>Harum reiciendis ducimus omnis, odit tempore ipsum in sed debitis deserunt ad, eaque nihil facilis, quae illo iste culpa nulla natus quas at delectus praesentium cupiditate! Perferendis maxime provident eum.</li>
+        <li>Ad amet quia iusto facilis molestiae, quibusdam magni nulla expedita sit illo quaerat vitae aut laborum molestias obcaecati, aliquid saepe delectus eum? Officiis, fugit! Officia eveniet tempora non minima fugiat.</li>
+        <li>Eius molestias cupiditate assumenda harum odio fugiat animi consequatur porro asperiores laborum voluptas nisi quia facere incidunt enim delectus ipsam ducimus in esse, veniam eum rem beatae nesciunt. Optio, dicta.</li>
+    </ol>
+    <form id="formulario">
+    Texto: <input type="text" name="texto" id="texto">
+    Posicion: <input type="text" name="posicion" id="posicion">
+    <input type="button" value="Introducir" onclick="introducir();">
+    <input type="button" value="Cancelar" onclick="cancelar();">
+    </form>
+    <script>
+        function introducir() {
+            var texto = document.getElementById("texto").value;
+            var posicion = document.getElementById("posicion").value;
+            while (posicion<1 || posicion>10 || isNaN(posicion)){
+                alert('Introduce posición del 1 al 10');
+            }
+
+            var lista = document.getElementById("lista");
+            //console.log(lista);
+            //console.log(lista.children[0]);
+
+            var nodoLi = document.createElement("li");
+                nodoLi.innerHTML= texto;
+                if(posicion > 9){
+                    document.getElementById("lista").appendChild(nodoLi);
+                }else{
+                    pos = lista.children[posicion-1];
+                    document.getElementById("lista").insertBefore(nodoLi,pos);
+                }
+                document.getElementById('formulario').setAttribute("style", "display:none");
+        }
+        function cancelar(){
+            document.getElementById("texto").value = "";
+            document.getElementById("posicion").value = "";
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

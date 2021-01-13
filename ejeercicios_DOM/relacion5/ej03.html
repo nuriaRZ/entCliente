@@ -1,0 +1,56 @@
+<!--Crear una página con una lista ordenada con 9 párrafos numerados (como Visual tiene
+instalado Emmet, podéis crearlos de forma automática con lorem ipsun, escribiendo
+ol>li*9>lorem y pulsando el tabulador).
+a) Pediremos al usuario que introduzca un párrafo y una posición por teclado, y que compruebe
+que el párrafo introducido ocupe esa posición, previa comprobación de:
+- Si se ha introducido un nº entre 1 y 10, el nuevo párrafo ocupará esa posición.
+- Si se ha introducido un nº que no está en el rango 1-10 o bien no se ha introducido un
+nº, se le mostrará un mensaje indicándolo y se le pedirá de nuevo el número-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nisi praesentium neque voluptates eius sapiente suscipit sit quod porro veniam, voluptate aliquid dolorum quos culpa velit, ipsum dicta facere rem.</li>
+        <li>Fugit, aliquam unde asperiores eos quos maxime fuga earum consectetur iure necessitatibus praesentium quo blanditiis maiores id culpa, esse itaque doloribus vitae nesciunt vero. Deserunt maiores quasi sapiente maxime magnam!</li>
+        <li>Magni perspiciatis exercitationem non quam id porro ad sit perferendis beatae, inventore cupiditate harum numquam rerum placeat delectus est provident? Rem, corrupti possimus saepe voluptatem perferendis sapiente omnis quidem cupiditate?</li>
+        <li>Esse culpa officia delectus odit. Dolorem voluptates consequatur, dolores, nesciunt placeat sint corrupti aperiam, quis possimus aut explicabo expedita dolor itaque. Corrupti voluptates est amet aliquid iste dolore explicabo tempora.</li>
+        <li>Necessitatibus maxime architecto eligendi est hic corrupti delectus aliquam aut, a sit enim mollitia minima modi nulla doloremque iure ipsum sapiente nemo magnam tempora assumenda quod! Minus quidem quo eius.</li>
+        <li>Accusamus commodi sint nobis enim sequi, in vero consequuntur, ipsam, cum ab voluptatibus officia facilis optio odio atque deleniti sed ullam fuga. Ab neque quasi ut, accusamus dolore nihil cum?</li>
+        <li>Harum reiciendis ducimus omnis, odit tempore ipsum in sed debitis deserunt ad, eaque nihil facilis, quae illo iste culpa nulla natus quas at delectus praesentium cupiditate! Perferendis maxime provident eum.</li>
+        <li>Ad amet quia iusto facilis molestiae, quibusdam magni nulla expedita sit illo quaerat vitae aut laborum molestias obcaecati, aliquid saepe delectus eum? Officiis, fugit! Officia eveniet tempora non minima fugiat.</li>
+        <li>Eius molestias cupiditate assumenda harum odio fugiat animi consequatur porro asperiores laborum voluptas nisi quia facere incidunt enim delectus ipsam ducimus in esse, veniam eum rem beatae nesciunt. Optio, dicta.</li>
+    </ol>
+    <input type="button" value="Añadir elemento" onclick="introducir();">
+    <script>
+        function introducir() {
+            var palabra = prompt("Introduce el texto del parrafo");
+            var posicion = prompt('Introduce posición del 1 al 10');
+
+            while (posicion<1 || posicion>10 || isNaN(posicion)){
+                var posicion = prompt('Introduce posición del 1 al 10');
+            }
+
+            var lista = document.getElementById("lista");
+            //console.log(lista);
+            //console.log(lista.children[0]);
+
+            var nodoLi = document.createElement("li");
+                nodoLi.innerHTML= palabra;
+                if(posicion > 9){
+                    document.getElementById("lista").appendChild(nodoLi);
+                }else{
+                    pos = lista.children[posicion-1];
+                    document.getElementById("lista").insertBefore(nodoLi,pos);
+                }
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

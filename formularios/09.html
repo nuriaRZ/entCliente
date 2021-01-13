@@ -1,0 +1,42 @@
+<!--9) Realizar una página HTML con su correspondiente javascript, en la que introduzcamos un texto en un textarea
+y muestre una ventana de salida en la que cuente el número de palabras, indique cuál es la primera y la última
+palabra, muestre todas las palabras del texto al revés, muestre todas las palabras ordenadas alfabéticamente y
+en orden inverso que haya en el cuadro de texto del textarea.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Introduce un texto</h2>
+    <form  >
+        <textarea id="texto" rows="10" cols="50"></textarea>
+        <button type="button" id="analizar" onclick="analizarTexto()">Analizar</button>
+    </form>
+    
+    
+    <script>
+           
+          
+        
+        function analizarTexto(){
+            var texto = document.getElementById("texto").value;            
+            var cadena = texto.split(" ");            
+            miVentana = window.open("", "ventana1", "height=300,width=500,left=300,location=yes,menubar=no,resizable=no,scrollbars=yes,status=no,titlebar=yes,top=300");
+            miVentana.document.write("<h2>Información sobre el texto introducido</h2>");
+            miVentana.document.write("Número de palabras: <p>"+ cadena.length + "</p><br>");
+            miVentana.document.write(" Primera palabra: <p>" + cadena[0] + "</p><br>");
+            miVentana.document.write("  Última palabra: <p>"+ cadena[cadena.length-1] +"</p><br>");
+            miVentana.document.write(" Texto al revés: <p>" + cadena.reverse() + "</p><br>");
+            miVentana.document.write(" Ordenado alfabéticamente: <p>"+ cadena.sort() +"</p><br>");
+            miVentana.document.write("Texto alfabéticamente de forma inversa: <p>"+ cadena.sort(deMayorAMenor) +"</p><br>");
+        }
+       
+        
+        function deMayorAMenor(elem1, elem2) {return elem2-elem1;}
+        
+    </script>
+</body>
+</html>

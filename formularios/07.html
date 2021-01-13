@@ -1,0 +1,45 @@
+<!--Crear un documento HTML con su correspondiente javascript, similar a la mostrada a continuación, de
+forma que si nos ponemos sobre un cuadrado, el fondo de la misma cambie a dicho color.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            width: 20px;
+            height: 20px;
+            margin: 2%;
+            border-width: 2px;
+            border-style: solid;
+            border-color: gray;
+        }
+        .rojo{
+            background-color: red;
+        }
+        .verde{
+            background-color: green;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .ama{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <script>     
+        function blanco(){
+            document.body.style.backgroundColor="white";
+        }
+    </script>
+    <div class="container">
+        <div id="rojo" class="cuadrado rojo" onmouseenter="document.body.style.backgroundColor='red';" onmouseout="blanco()"></div>
+        <div id="verde" class="cuadrado verde" onmouseenter="document.body.style.backgroundColor='green';" onmouseout="blanco()"></div>
+        <div  id="azul" class="cuadrado azul" onmouseenter="document.body.style.backgroundColor='blue';" onmouseout="blanco()"></div>
+        <div id="ama" class="cuadrado ama" onmouseenter="document.body.style.backgroundColor='yellow';" onmouseout="blanco()"></div>
+    </div>
+</body>
+</html>

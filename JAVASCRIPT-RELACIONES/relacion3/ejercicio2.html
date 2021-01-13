@@ -1,0 +1,92 @@
+<!--2) Definir la estructura de un objeto que almacena una factura. Las facturas están formadas por la
+información de la propia empresa (nombre de la empresa, dirección, teléfono, NIF), la información
+del cliente (Nº cliente, DNI, nombre, domicilio, cp, ciudad, provincia) y una lista de productos (cada
+uno de los cuales dispone de descripción, precio, cantidad) e información básica de la factura
+(importe total, forma de pago).
+Una vez definidas las propiedades del objeto, añadir un método que calcule el importe total de la factura y
+actualice el valor de la propiedad correspondiente.
+Por último, añadir otro método que muestre por pantalla el importe total de la factura.
+Notas: hay que hacerlo de las dos siguientes formas:
+- Notación de objeto literal
+- Notación de clases
+- Los datos de la factura serán inventados.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        class Empresa{
+            constructor(nombreEmp, dirEmp, tlfEmp, nif){
+                this.nombreEmp = nombreEmp;
+                this.dirEmp = dirEmp;
+                this.tlfEmp = tlfEmp;
+                this.nif = nif;
+            }
+        }
+        class Cliente{
+            constructor(numCli, dni, nombreCli, domicilio, cp, ciudad, provincia){
+                this.numCli = numCli;
+                this.dni = dni;
+                this.nombreCli = nombreCli;
+                this.domicilio = domicilio;
+                this.cp = cp;
+                this.ciudad = ciudad;
+                this.provincia = provincia;
+            }
+        }
+
+        class Producto{
+            constructor(descripcion, precio, cantidad){
+                this.descripcion = descripcion;
+                this.precio = precio;
+                this.cantidad = cantidad;
+            }
+        }
+        class Factura{
+            constructor(Empresa, Cliente, productos, formaPago){
+                this.Empresa = Empresa;
+                this.Cliente = Cliente;
+                this.importeTotal = 0;
+                this.productos = productos;                
+                this.formaPago = formaPago;
+                
+            }
+
+            calculoImporte() {                
+                this.productos.forEach(element => {
+            this.importeTotal = this.importeTotal + (element.precio * element.cantidad);
+            });
+            this.imprimirPago();
+            }
+            imprimirPago(){ 
+                document.write("El total de la factura es: "+ this.importeTotal);
+            }
+            
+        }
+        
+
+        var productos = [new Producto('zapatos', 15, 3),
+                        new Producto('pantalon', 25, 1),
+                        new Producto('camiseta', 20, 2)];
+        const emp1 = new Empresa("Cotton", "calle las tiendas", "55555", "555555");
+        const cli1 = new Cliente("Cli1", "14526W", "Pepe", "Calle Santiago", "14900", "Lucena", "Córdoba");
+        
+        const f1 = new Factura(emp1, cli1, productos,  "tarjeta");  
+        console.log(f1);
+        f1.calculoImporte();
+        
+          
+        
+        
+        
+        
+
+
+
+    </script>
+</body>
+</html>

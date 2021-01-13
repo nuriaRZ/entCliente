@@ -1,0 +1,67 @@
+<!--4) A partir del siguiente array que se proporciona:
+var array = [6, "pepe", 2, “juan”];
+Determinar cuál de los dos elementos de texto es mayor
+Determinar el resultado de las 4 operaciones básicas matemáticas con los dos elementos numéricos-->
+<!DOCTYPE html>
+<html>
+<body> 
+    
+
+<script>
+   
+    var array = [6, "pepe", 2, "juan"];
+    var nombres = [];
+    var numeros = [];
+    var suma = 0;
+   
+
+
+    for (let i = 0; i < array.length; i++) {
+        
+        if (typeof array[i] == "number" ){
+            numeros.push(array[i]);            
+        }
+        if (typeof array[i] == "string" ){
+            nombres.push(array[i]);
+       
+        }
+       
+    }
+
+    array.forEach(imprimirArray);
+    document.write("<br>array de nombres <br>");
+    nombres.forEach(imprimirArray);
+    document.write("<br>array de numeros <br>");
+    numeros.forEach(imprimirArray);
+    document.write("<br>array de nombres ordenado <br>");    
+    document.write(nombres.sort()); 
+    
+
+    document.write("<br>suma: "+(numeros[0] + numeros[1]));  
+    document.write("<br>resta: "+(numeros[0] - numeros[1]));
+    document.write("<br>multiplicacion: "+(numeros[0] * numeros[1]));
+    document.write("<br>division: "+(numeros[0] / numeros[1]));
+   
+
+    
+    function imprimirArray(value) {
+        document.write(value+" ");
+    }
+
+
+
+
+
+
+        
+        
+  
+
+    
+
+
+</script>
+
+
+</body>
+</html> 

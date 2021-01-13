@@ -1,0 +1,27 @@
+<!--2) Hacer un programa que nos pida 10 números y posteriormente que los muestre y muestre la
+suma de dichos elementos.-->
+<!DOCTYPE html>
+<html>
+<body> 
+    
+
+<script>
+
+    var array = [];
+    var suma = 0;
+
+    for (let i = 0; i < 10; i++) {
+      var num = parseInt(prompt("Introduce un número"));
+       array[i] = num; 
+       document.writeln(array[i]);
+       suma += array[i];
+    }
+
+    document.write("<br>"+suma);
+    
+
+</script>
+
+
+</body>
+</html> 

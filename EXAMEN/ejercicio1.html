@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jqueryValidation.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="login">
+        <label>Usuario</label>
+        <input type="text" name="usuario" id="usuario"><br>
+        <label>Contraseña</label>
+        <input type="password" name="pass" onclick="btnConfirmar()" id="pass" ><br>
+        <input type="password" name="repetir" onclick="btnConfirmar()" id="repetir" placeholder="repite contraseña"><br>
+        
+        <button type="submit" id="enviar"  disabled>Enviar</button>  
+        <button type="submit" id="confirmar" onclick="confirmarPass()">Confirmar</button>      
+    </form> 
+    <div id="imagen">
+        <img src="error.jpg" width="50px" height="50px">
+    </div>
+
+    <script>
+        document.getElementById("confirmar").style.display="none";
+        document.getElementById("repetir").style.display="none";
+        document.getElementById("imagen").style.display="none";
+         $(function () {
+            $("#login").validate({
+                debug: true,
+                rules: {
+                    usuario: {
+                        required: true,
+                        
+                    },
+                    pass: {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 10                        
+                    }
+                },
+                messages:{
+                    usuario:{
+                        required: "El campo usuario es obligatorio",
+                    },
+                    pass:{
+                        required: "El campo contraseña es obligatorio",
+                        minlength: "La longitud mínima es 8",
+                        maxlength: "La longitud maxima es 10",
+                    },
+                }
+                
+            });        
+        });
+
+        function btnConfirmar(){
+            document.getElementById("confirmar").style.display="initial";
+            document.getElementById("repetir").style.display="initial";
+        }
+
+        function confirmarPass(){
+            var pass1 = document.getElementById("pass").value;
+            var pass2 = document.getElementById("repetir").value;
+            if(pass1 == pass2){
+                document.getElementById("enviar").disabled = false;
+            }else{
+                document.getElementById("imagen").style.display="initial";
+                document.getElementById("imagen").width+="10px";
+            }
+        }
+
+    </script>
+</body>
+</html>

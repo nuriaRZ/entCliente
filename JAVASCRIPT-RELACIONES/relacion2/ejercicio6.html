@@ -1,0 +1,26 @@
+<!--6) Definir una función que calcule el menor de tres números pasados como parámetro.-->
+<!DOCTYPE html>
+<html>
+<body> 
+    
+
+<script>
+    var a =parseInt(prompt("introduce un numero"));
+    var b =parseInt(prompt("introduce un numero"));
+    var c =parseInt(prompt("introduce un numero"));
+    alert("El menor es: "+menor(a,b,c));
+
+
+ function menor(a, b, c) {
+     if(a < b && a < c) return a;        
+     
+     if (b < a && b < c) return b;         
+     
+     if (c < a && c < b) return c;
+ }  
+
+</script>
+
+
+</body>
+</html> 

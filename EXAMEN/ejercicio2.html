@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <title>REPARACIONES COMARES</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jqueryValidation.js"></script>
+    <style>
+    input[type=number] {
+        width: 50px;
+        
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Centro de Reparaciones IES Marqués de Comares</h1>
+    <table> 
+    <tr>
+    <td width="800">
+            <h2>Solicutud de Reparación</h2>
+            <form id="formulario1" action="#" method="get">
+                   <label for="apellido">Apellidos: </label>
+                   <input type="text" name="apellido" id="apellido" size="40" maxlength="40">
+                   <label for="nombre">Nombre: </label>
+                   <input type="text" name="nombre" id="nombre">
+                   <br/> <br/>
+                   <label for="telefono">Teléfono: </label>
+                   <input type="text" name="telefono" id="telefono" size="10" maxlength="9">
+                   <label for="numserire">Nº serie equipo: </label>
+                   <input type="text" name="numserie" id="numserie" size="30" maxlength="30">
+                   <br/> <br/>
+                   <label for="clasereparacion">Tipo de reparación: </label>
+                   <input type="radio" name="clasereparacion" value="sobremesa"> Ordenador de sobremesa
+                   <input type="radio" name="clasereparacion" value="portatil" id="portatil"> Ordenador portátil
+                   <input type="radio" name="clasereparacion" value="immpresora"> Impresora
+                   <br/> <br/>
+                    <p id="separar"></p>
+                      <label for="obtencion1">Antigüedad: </label>
+                   <input type="number" name="antiguedad" id="antiguedad" >
+                   <br/> <br/>
+                   <label for="select1">Tipo avería: </label>
+                   <select name="tipoaveria" id="tipoaveria">
+                   <option>hardware</option>
+                   <option>software</option>
+                   </select>
+                   <br/> <br/>
+                   <label for="sintomas">Síntoms avería: </label><br>
+                   <input type="checkbox" name="sintomas" value="nohacenada" id="nohacenada"> No hace nada<br>
+                   <input type="checkbox" name="sintomas" value="pitaynoenciende" id="pitaynoenciende"> Pita y no enciende<br>
+                   <input type="checkbox" name="sintomas" value="arrancayseapaga" id="arrancayseapaga"> Arranca pero al rato se apaga<br>
+                   <input type="checkbox" name="sintomas" value="novasistemaoperativo" id="novasistemaoperativo"> El sistema operativo no llega a arrancar<br>
+                   <input type="checkbox" name="sintomas" value="pantallazoazul" id="pantallazoazul"> Pantallazo azul<br>
+                   <br/> <br/>
+                   <label for="observaciones1">Observaaciones: </label><br>
+                   <textarea name="observaciones1" onclick="areaTexto()" id="observaciones1" rows="10" cols="50">Indique si tiene alguna observación que crea importante que debamos conocer...</textarea>
+                   <br/> <br/>
+                   <input type="submit" value="Enviar" onclick="sintomasConsola()" id="Enviar1">
+                   <input type="reset" id="Reset1" value="Limpiar">
+                </form>
+    </td>
+    </tr>
+    </table>
+
+
+
+    <script>
+        
+            var nodo = document.createElement("INPUT");
+            nodo.setAttribute("type", "text");
+            var viejo = document.getElementById("separar");
+            if (document.getElementById("portatil").checked){
+                document.getElementById("formulario1").insertBefore(nodo, viejo);
+            }
+        
+
+        function sintomasConsola() {
+           var sintomas= document.getElementsByName("sintomas");
+           sintomas.forEach(element => {
+            var isChecked = element.checked;
+            if(isChecked){
+                console.log(element.value);
+            }
+           });
+        }
+
+        function areaTexto(){
+            document.getElementById("observaciones1").style.backgroundColor="black";
+            document.getElementById("observaciones1").style.color="white";
+        }
+
+
+$(function () {
+            $("#formulario1").validate({
+                debug: true,
+                rules: {
+                    nombre: {
+                        required: true,
+                        
+                    },
+                    apellido: {
+                        required: true,                                                
+                    },
+                    telefono:{
+                        required: true,
+                    },
+                    numserie:{
+                        required: true,
+                    },
+                    clasereparacion: {
+                        required: true,
+                    },
+                    sintomas: {
+                        required: true,
+                    }
+                },
+                messages:{
+                    nombre:{
+                        required: "El campo es obligatorio",
+                    },
+                    apellido:{
+                        required: "El campo es obligatorio",
+                    },
+                    telefono:{
+                        required: "El campo es obligatorio",
+                    },
+                    numserie:{
+                        required: "El campo es obligatorio",
+                    },
+                    clasereparacion:{
+                        required: "El campo es obligatorio",
+                    },
+                    sintomas:{
+                        required: "El campo es obligatorio",
+                    }
+                }
+                
+            });        
+        });
+    </script>
+</body>
+</html>

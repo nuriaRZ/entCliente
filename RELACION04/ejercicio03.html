@@ -1,0 +1,34 @@
+<!--Realizar una función javascript que elimine una subcadena de texto de un texto dado
+Ej:eliminarSubcadena("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5” .-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+
+</head>
+
+<body>
+
+    <p id="cadena"></p>
+    <p id="solucion"></p>
+    <button onclick="eliminarCadena('xyz1, xyz2, xyz3, xyz4 y xyz5', 'xyz');">Borrar</button>
+    <script>
+        eliminarCadena = (cadena, subcadena) => {
+
+            document.getElementById("cadena").innerHTML = cadena;
+
+            let eliminar = cadena.replace(new RegExp(subcadena, "gi"), "");
+            //Con la expresión regular reemplazamos con gi (que se lo traga todo) la subcadena por "" que está vacío
+            document.getElementById("solucion").innerHTML = eliminar;
+        }
+    </script>
+
+
+</body>
+
+</html>

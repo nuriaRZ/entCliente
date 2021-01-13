@@ -1,0 +1,22 @@
+<!-- Definir una función que compruebe si la cadena de texto pasada como parámetro está formada
+sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas-->
+<!DOCTYPE html>
+<html>
+<body> 
+    
+
+<script>
+    var cadenaUsuario = prompt("Introduce una frase");
+    alert(comprobarCadena(cadenaUsuario));
+
+    function comprobarCadena(cadena){
+        if (cadena == cadena.toUpperCase()) return "está formada por mayúsculas";
+        else if(cadena == cadena.toLowerCase()) return "está formada por minúsculas";
+        else return "está formada por mayúsculas y minúsculas";
+    }
+
+</script>
+
+
+</body>
+</html> 

@@ -1,0 +1,39 @@
+<!--Realizar un documento HTML con su correspondiente código javascript similar al mostrado a continuación
+que simule el funcionamiento de una página de autenticación de usuario mediante usuario y password que
+serían “admin” y “1234” respectivamente, de forma que si acertamos nos indique “Bienvenidos al sistema” y
+si fallamos “Usuario y/o contraseña incorrecta”.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    Introduzca su usuario y clave<br>
+    <form action="" method="">
+        <label>Usuario</label>
+        <input type="text" name="usuario" id="usuario"><br>
+        <label>Contraseña</label>
+        <input type="password" name="pass" id="pass"><br>
+        <button type="submit" id="enviar" onclick="validar()">Enviar</button>
+        <button type="submit" id="enviar" onclick="limpiar()">Limpiar</button>
+    </form>
+    <script>
+        function validar(){
+        usuario = document.getElementById('usuario').value;
+        pass = document.getElementById('pass').value;
+            if(usuario=="admin" && pass=="1234"){
+                document.write("BIENVENIDO");
+            }else{
+                document.write("Usuario y/o contraseña incorrecto");
+            }
+        }
+        function limpiar(){
+        document.getElementById('usuario').value="";
+        document.getElementById('pass').value="";
+            
+        }
+    </script>    
+</body>
+</html>

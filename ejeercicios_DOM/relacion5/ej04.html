@@ -1,0 +1,53 @@
+<!--rear una página que al mover el ratón sobre la página, muestre un pequeño cartel con fondo
+amarillo que siga al cursor y muestre el texto “Aquí está el cursor”-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+function getMouseCoords(e) {
+     var e = e || window.event;
+     document.getElementsByTagName('container').innerHTML = e.clientX + ', ' + 
+              e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
+}
+
+
+var followCursor = (function() {
+     var s = document.createElement('div');
+     s.style.position = 'absolute';
+     s.style.margin = '0';
+     s.style.padding = '5px';
+     s.style.border = '1px solid yellow';
+     s.style.backgroundColor = 'yellow';
+     s.textContent = 'Aqui está el cursor';
+
+     return {
+       init: function() {
+         document.body.appendChild(s);
+       },
+
+       run: function(e) {
+         var e = e || window.event;
+         s.style.left  = (e.clientX - 5) + 'px';
+         s.style.top = (e.clientY - 5) + 'px';
+         getMouseCoords(e);
+       }
+     };
+}());
+
+window.onload = function() {
+     followCursor.init();
+     document.body.onmousemove = followCursor.run;
+}
+
+</script>
+
+<div id="container" style="width: 1000px; height: 1000px; border: 1px solid blue;"></div>   
+   
+</body>
+</html>

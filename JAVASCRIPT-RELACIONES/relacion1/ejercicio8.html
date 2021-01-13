@@ -1,0 +1,27 @@
+<!--8) Realizar un documento html que muestre dos botones que al pulsarlo abra una ventana y otro que al pulsarlo
+cierra la misma.-->
+<!DOCTYPE html>
+<html>
+<body>
+
+
+ <button onclick="JavaScript:openFunction();">ABRIR</button> <br> 
+ <button onclick="JavaScript:CloseFunction();">CERRAR</button>  
+
+
+<script>   
+    var ventana;
+    function openFunction(){
+      ventana = window.open("https://www.google.es", "Diseño Web", "width=300, height=200");       
+    }
+
+    function CloseFunction(){
+      ventana.close()
+       
+    }
+
+</script>
+
+
+</body>
+</html> 

@@ -1,0 +1,30 @@
+<!--Crear una página que tenga un texto bastante grande, y que al pedir una palabra, busque
+dicha palabra y aparezca resaltada dentro del texto. (investigar window.find y la etiqueta html
+<mark>).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
+        <script>
+            
+            function find(string) {
+                var parrafo = document.querySelector("p");
+                if(parrafo.innerHTML.indexOf(string) != 1){
+                    var contador = new RegExp(string, "g");
+                    parrafo.innerHTML = parrafo.innerHTML.replace(contador, '<mark>'+string+'</mark>');
+                }
+                
+            }
+            find("dolor");
+        </script>
+</body>
+</html>

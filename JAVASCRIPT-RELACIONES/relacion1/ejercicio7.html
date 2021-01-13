@@ -1,0 +1,30 @@
+<!--Realiza un documento html con javascript que simule un algoritmo que pida 1 número al usuario y le diga si es
+par y además es mayor de 10. En ese caso mostrará “NÚMERO CORRECTO”, en caso contrario “NÚMERO
+INCORRECTO”. -->
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<form>
+    Introduzca un numero: <input type="text" name="number" id="number"><br>
+    <input type="submit" value="Mostrar" onclick="myFunction()">    
+</form>
+
+<script>    
+    function myFunction(){
+        let number = parseInt(document.getElementById("number").value);
+         if (number % 2 == 0 && number > 10) {
+             alert("NÚMERO CORRECTO");            
+             
+         }else{
+             alert("NÚMERO INCORRECTO")
+         }
+       
+    }
+
+</script>
+
+
+</body>
+</html> 

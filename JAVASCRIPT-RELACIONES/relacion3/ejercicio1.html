@@ -1,0 +1,31 @@
+<!--1) Crear un script basado en el objeto fecha (Date) que devuelva el día, mes y cuatrimestre actual,
+con el siguiente formato de mensaje: “Estamos en el día D (día semana) del mes M (mes actual)
+del primer|segundo|tercer cuatrimestre del año AAAA”-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        var fecha = new Date();
+        var dias = ["Domingo" ,"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        
+        var dia = fecha.getDay();
+        var mes = fecha.getMonth();
+        var annio = fecha.getFullYear();       
+   
+       if (meses[mes] <= 4){
+        document.write(`Estamos a ${dias[dia]}, del  ${meses[mes]} del primer cuatrimestre del ${annio}`); 
+       } else if (meses[mes] >4 && meses[mes] <=8 ) {
+        document.write(`Estamos a  ${dias[dia]}, del  ${meses[mes]} del segundo cuatrimestre del ${annio}`);
+       }else {
+        document.write(`Estamos a  ${dias[dia]}, del  ${meses[mes]} del tercer cuatrimestre del ${annio}`);
+       }
+       
+    </script>
+</body>
+</html>

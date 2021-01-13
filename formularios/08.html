@@ -1,0 +1,52 @@
+<!--8) Realizar un documento HTML con su correspondiente código Javascript que simule un conversor de distancia
+(Km a metros o viceversa) y un conversor de Peso (Kg a gramos o viceversa).
+Hay que tener en cuenta que en cuanto que hagamos clic en uno de los dos cuadros de texto del conversor de peso, el
+otro cuadro de texto debe ponerse en blanco (si es que hubiese algún contenido) y lo mismo para el conversor de distancia.
+Además, hay que comprobar que nos hayan metido al menos un dato para poder convertir.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+
+    <h1>Conversor de pesos y pesetas</h1>
+    <form >
+        <label>Kgs:</label>
+        <input type="text" onclick="limpiar('kg', 'g')" id="kg">
+        <button type="button" id="peso" onclick="convertir('kg', 'g')">Convertir peso</button>
+        <label>g:</label>
+        <input type="text" id="g">
+        <hr>
+        <label>Euros:</label>
+        <input type="text" onclick="limpiar('euros', 'pesetas')" id='euros'>
+        <button type="button"  onclick="convertir('euros', 'pesetas')">Convertir pesetas</button>
+        <label>Pesetas:</label>
+        <input type="text" id="pesetas">
+    </form>
+    <script>
+
+        function limpiar(id1, id2){
+            document.getElementById(id1).value = "";
+            document.getElementById(id2).value = "";
+        }
+        
+        function convertir(id, resultado) {
+           var num = document.getElementById(id).value;        
+           if(num == "" || isNaN(num)){               
+               alert("introduce un numero");
+           }else{
+               if(id=="kg")
+               document.getElementById(resultado).value = num * 1000;
+               if(id=="euros")
+               document.getElementById(resultado).value = num * 0.0060;
+           }
+
+        }
+        
+        
+    </script> 
+</body>
+</html>

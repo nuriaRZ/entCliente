@@ -1,0 +1,171 @@
+---RELACION 1 BÁSICOS---
+3) Programa que lee la longitud de los 3 lados de un triángulo y analiza qué tipo de triángulo es: no es
+triángulo, equilátero, isósceles, escaleno, rectángulo
+4) Realizar un documento html con código javascript que muestre los 15 números enteros, uno en cada línea.
+5) Realizar un documento html con código javascript que muestre los textos:
+TITULO 1
+TITULO 2
+TITULO 3
+TITULO 4
+TITULO 5
+TITULO 6
+de forma que el primero aparezca con la etiqueta h1, el siguiente con h2 y así hasta el sexto con la etiqueta h6
+6) Realizar un documento html con código javascript que pida en un cuadro de texto de un formulario un número
+del 2 al 9, de forma que al darle a un botón llamado mostrar, muestre la tabla de multiplicar de dicho numero.
+7) Realiza un documento html con javascript que simule un algoritmo que pida 1 número al usuario y le diga si es
+par y además es mayor de 10. En ese caso mostrará “NÚMERO CORRECTO”, en caso contrario “NÚMERO
+INCORRECTO”.
+8) Realizar un documento html que muestre dos botones que al pulsarlo abra una ventana y otro que al pulsarlo
+cierra la misma.
+9) Realizar un documento html de un juego que trata de jugar a acertar un número. Para ello el algoritmo debe
+generar un número aleatoriamente entre 1 y 100. El programa le irá pidiendo números al usuario hasta que lo
+acierte. Sería muy conveniente dar pistas al usuario, diciéndole si el número introducido es mayor o menor al
+que tiene que acertar.
+10) Mejora el programa anterior, indicando el número de intentos que ha necesitado el usuario para acertar el
+número.
+11) Mejora el programa anterior limitando el número de intentos a 10. En caso de que se llegue al límite y no se
+haya acertado el número, el programa debe mostrar al usuario: “HAS PERDIDO!!”
+
+---RELACION 2 ARRAYS Y FUNCIONES (PALINDROMO)---
+1) Crear un array llamado *meses* y que almacene el nombre de los doce meses del año. bMostrar
+por pantalla los doce nombres utilizando la función *alert()*
+2) Hacer un programa que nos pida 10 números y posteriormente que los muestre y muestre la
+suma de dichos elementos.
+3) Programa que calcula y almacene en un array todos los múltiplos de 11 menores de 3000, los
+muestre y muestre la suma de todos ellos.
+4) A partir del siguiente array que se proporciona:
+var array = [6, "pepe", 2, “juan”];
+Determinar cuál de los dos elementos de texto es mayor
+Determinar el resultado de las 4 operaciones básicas matemáticas con los dos elementos numéricos
+5) Sabiendo la letra de un Documento Nacional de Identidad (DNI) se obtiene del resto de la
+división entera del número de DNI entre 23, y accediendo con ese resto a la posición del
+siguiente array de letras (comenzando en la posición 0):
+letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+a) Pedir un número de DNI al usuario y calcular su letra.
+b) Pedir al usuario un DNI con letra y comprobar si ese DNI puede ser correcto (letra correcta).
+6) Definir una función que calcule el menor de tres números pasados como parámetro.
+7) Definir una función que compruebe si la cadena de texto pasada como parámetro está formada
+sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas
+8) Definir una función que compruebe si la cadena de texto que se le pasa como parámetro es un
+palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha.
+Ejemplo de palíndromo: "Dabale arroz a la zorra el abad".
+
+---RELACION 3 OBJETOS... date, factura, circulo---
+1) Crear un script basado en el objeto fecha (Date) que devuelva el día, mes y cuatrimestre actual,
+con el siguiente formato de mensaje: “Estamos en el día D (día semana) del mes M (mes actual)
+del primer|segundo|tercer cuatrimestre del año AAAA”
+2) Definir la estructura de un objeto que almacena una factura. Las facturas están formadas por la
+información de la propia empresa (nombre de la empresa, dirección, teléfono, NIF), la información
+del cliente (Nº cliente, DNI, nombre, domicilio, cp, ciudad, provincia) y una lista de productos (cada
+uno de los cuales dispone de descripción, precio, cantidad) e información básica de la factura
+(importe total, forma de pago).
+Una vez definidas las propiedades del objeto, añadir un método que calcule el importe total de la factura y
+actualice el valor de la propiedad correspondiente.
+Por último, añadir otro método que muestre por pantalla el importe total de la factura.
+Notas: hay que hacerlo de las dos siguientes formas:
+- Notación de objeto literal
+- Notación de clases
+- Los datos de la factura serán inventados.
+3) Realizar un programa que permita crear un objeto de tipo círculo con un determinado radio
+con una función que nos calcule su área, otra su longitud.
+
+---RELACION 4 arrow function, subcadenas, numeros capicuas, fechas, cadenas, ordenar array asc/desc, clase Pelicula---
+1) Realizar una función javascript que invierta las palabras de una cadena de texto,
+Ej: invertir(“Miguel Angel”) devolverá “legnA leugiM”.
+2) Realizar una función javascript con notación “Arrow function” para contar el número de veces que se
+repite una palabra en un texto Ej: textoRepetido("estoy en el parque porque estoy aburrido", "estoy")
+devolverá 2.
+3) Realizar una función javascript que elimine una subcadena de texto de un texto dado
+Ej:eliminarSubcadena("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5” .
+4) Realizar una función javascript que reciba un número y compruebe si es capicúa o no
+5) Realizar una función javascript que dada una fecha, devuelva cuantos años han pasado hasta la fecha
+actual
+6) Realizar una función que devuelva el número de vocales y consonantes de una cadena de texto pasada
+como parámetro
+Ej: vocalConsonante("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+7) Realizar una función javascript con notación “Arrow function” que dado un array como parámetro,
+devuelva un array con el mayor y el menor número encontrados en el array pasado como parámetro.
+Ej. mayorMenor(([7, 4, 5, 199, -21]) devolverá [199, --21].
+8) Realizar una función que al pasarle un array de números como parámetro, devuelva un objeto con 2
+arrays, en el primero almacena los números pares y en el segundo los impares, pe.
+miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+9) Programa una función que dado un arreglo de números devuelva un objeto con dos arrays, el primero
+contendrá el contenido del array original ordenado en forma ascendente y el segundo, el contenido del
+array original ordenado de forma descendiente.
+Ej ascendenteDescendente(([3, 5,3,8,6]) devolverá { asc: [3,3,5,6,8], desc: [8,6,5,3,3] }.
+10) Realizar en javascript una clase llamada Película con los siguientes datos: id de la película, titulo,
+director, año de estreno, país o países de origen, género y calificación. Hay que comprobar lo siguiente:
+- que el id tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+- que el título no supere los 100 caracteres.
+- que el año de estreno sea un número entero de 4 dígitos.
+- que el país o países sea introducidos en forma de array.
+- que el género introducido esté entre los siguientes géneros válidos. los géneros sean introducidos en
+forma de arreglo. - Valida que los géneros introducidos estén dentro de los géneros aceptados: Action,
+Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film
+Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi,
+Short, Sport, Talk-Show, Thriller, War, Western*. - Crea un método estático que devuelva los géneros
+aceptados*.
+Crear un método que devuelva toda la ficha técnica de la película.
+- A partir de un array con la información de 3 películas genera 3 instancias de la clase de forma
+automatizada e imprime la ficha técnica de cada película. 
+
+--- RELACION 5 DOM Y EVENTOS, redirigir, encontrar palabra en texto, agregar elementos en lista, cartel que sigue raton, cargar imagen aleatoria al pasar el raton, mostrar velocidad al pulsar tecla---
+1) Mostrar una página con el contenido “Redirigido a google”, de forma que pasados 10
+segundo, se rediriga automáticamente a la página del buscador de Google (investigar
+setTimeout).
+2) Crear una página que tenga un texto bastante grande, y que al pedir una palabra, busque
+dicha palabra y aparezca resaltada dentro del texto. (investigar window.find y la etiqueta html
+<mark>).
+3) Crear una página con una lista ordenada con 9 párrafos numerados (como Visual tiene
+instalado Emmet, podéis crearlos de forma automática con lorem ipsun, escribiendo
+ol>li*9>lorem y pulsando el tabulador).
+a) Pediremos al usuario que introduzca un párrafo y una posición por teclado, y que compruebe
+que el párrafo introducido ocupe esa posición, previa comprobación de:
+- Si se ha introducido un nº entre 1 y 10, el nuevo párrafo ocupará esa posición.
+- Si se ha introducido un nº que no está en el rango 1-10 o bien no se ha introducido un
+nº, se le mostrará un mensaje indicándolo y se le pedirá de nuevo el número
+b) Hará lo mismo que antes salvo que en este caso habrá dos cuadros de texto y dos botones:
+botón insertar y botón cancelar, de forma que en el primer cuadro de texto introduciremos el
+contenido y en el segundo el número de orden. Si pulsamos “insertar” se realizará de forma
+correcta la inserción del párrafo en su número de orden y desaparecerán los botones y los
+cuadros de texto, mientras que, si pulsamos “cancelar”, se resetearán los cuadros de texto y no
+se realizará la operación, manteniendo los botones por si queremos intentarlo de nuevo.
+c) Modificar el apartado b de forma que el número de párrafo debe estar contenido en un campo
+de tipo number, de forma que si la inserción del párrafo ha sido correcta, en este caso no
+desaparezca el cuadro de texto ni el campo number, sino resetee el cuadro de texto del párrafo
+y modifique el contenido del campo number para que aparezca un valor más por si queremos
+volver a insertar otro párrafo.
+d) En este caso, añadir un cuadro de tipo number cuyo contenido será el nº de párrafos de la
+página y un botón más eliminar, en el que al hacer clic se eliminará el párrafo de orden
+correspondiente a ese número.
+4) Crear una página que al mover el ratón sobre la página, muestre un pequeño cartel con fondo
+amarillo que siga al cursor y muestre el texto “Aquí está el cursor”.
+5) Crear una página con fondo negro y un cuadro de texto centrado en la misma con el contenido
+“Situarse en el cuadro para insertar imagen”, de forma que cada vez que entremos al cuadro de
+texto, cargará una imagen aleatoria del servicio gratuito umplash (para ello, basta con usar
+“url(‘https://source.unsplash.com/ramdom’)” que sustituya al fondo negro.
+6) Crear una aplicación web que muestre el texto: Velocidad X, de forma que si pulsamos los
+cursores arriba o abajo, incrementará o decrementará respectivamente X en una unidad.
+
+---RELACION 6 FORMULARIOS Y JQUERY---
+1) Realizar un documento HTML con su correspondiente código javascript similar al mostrado a continuación
+que simule el funcionamiento de una página de autenticación de usuario mediante usuario y password que
+serían “admin” y “1234” respectivamente, de forma que si acertamos nos indique “Bienvenidos al sistema” y
+si fallamos “Usuario y/o contraseña incorrecta”.
+2) Crear un documento HTML con su correspondiente código Javascript que permita poner un fondo de color
+aleatorio a la página cada vez que entremos en la misma (utilizar la propiedad rgb de CSS). Dicha página
+debe pedir un número mediante un mensaje prompt, debiendo indicarnos mediante un mensaje de alerta si
+realmente hemos introducido un número o no.
+7) Crear un documento HTML con su correspondiente javascript, similar a la mostrada a continuación, de
+forma que si nos ponemos sobre un cuadrado, el fondo de la misma cambie a dicho color.
+8) Realizar un documento HTML con su correspondiente código Javascript que simule un conversor de distancia
+(Km a metros o viceversa) y un conversor de Peso (Kg a gramos o viceversa).
+Hay que tener en cuenta que en cuanto que hagamos clic en uno de los dos cuadros de texto del conversor de peso, el
+otro cuadro de texto debe ponerse en blanco (si es que hubiese algún contenido) y lo mismo para el conversor de distancia.
+Además, hay que comprobar que nos hayan metido al menos un dato para poder convertir.
+9) Realizar una página HTML con su correspondiente javascript, en la que introduzcamos un texto en un textarea
+y muestre una ventana de salida en la que cuente el número de palabras, indique cuál es la primera y la última
+palabra, muestre todas las palabras del texto al revés, muestre todas las palabras ordenadas alfabéticamente y
+en orden inverso que haya en el cuadro de texto del textarea.
+12) Realizar una página Web similar a la mostrada a continuación, que muestre dos formularios para poder
+matricularse en módulos de DAW o SMR.

@@ -1,0 +1,38 @@
+<!--9) Realizar un documento html de un juego que trata de jugar a acertar un número. Para ello el algoritmo debe
+generar un número aleatoriamente entre 1 y 100. El programa le irá pidiendo números al usuario hasta que lo
+acierte. Sería muy conveniente dar pistas al usuario, diciéndole si el número introducido es mayor o menor al
+que tiene que acertar.-->
+<!DOCTYPE html>
+<html>
+<body>
+   
+<script> 
+     var number = Math.floor(Math.random() * 101);        
+      var  attempts = 0; 
+        while(true){
+            var userNumber = prompt(`Introduzca un número \n numero aleatorio ${number} \nNumero de intentos ${attempts}`);
+            
+            if(userNumber == number){
+                alert("HAS ACERTADO!!! \nNumero de intentos: ${attempts} ");
+                break;
+            }else if(userNumber == 0) {
+                break;
+            }else if (attempts == 10){
+                alert(`"HAS PERDIDO!!! \nNumero de intentos: ${attempts} "`);
+                break;
+
+            }else if(number < userNumber){
+                alert(`EL NÚMERO ES MENOR QUE ${userNumber}. VUELVE A INTENTARLO!`);
+                attempts++;
+            }else if(number > userNumber){
+                alert(`EL NÚMERO ES MAYOR QUE ${userNumber}. VUELVE A INTENTARLO!`);
+                attempts++;
+            }  
+        } 
+
+</script>
+
+
+
+</body>
+</html> 
