@@ -1,0 +1,81 @@
+{
+  "primero": [
+    {
+      "id": 1,
+      "modulo": "Programación",
+      "profesor": "Rafael Muñoz"
+    },
+    {
+      "id": 2,
+      "modulo": "Lenguaje de Marcas",
+      "profesor": "Rafael Muñoz"
+    },
+    {
+      "modulo": "Bases de datos",
+      "profesor": "Alejandro Paniego",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "modulo": "Sistemas Informáticos",
+      "profesor": "Joaquín Molina"
+    },
+    {
+      "modulo": "Entornos de profesorsarrollo",
+      "profesor": "Fran Lucena",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "modulo": "Formación y orientación laboral",
+      "profesor": "María Dolores"
+    },
+    {
+      "modulo": "sdfgsdfg",
+      "profesor": "sdfgsdf",
+      "id": 7
+    },
+    {
+      "modulo": "drtyurtu",
+      "profesor": "rtyutruytrut",
+      "id": 8
+    },
+    {
+      "id": 21,
+      "modulo": "DWA",
+      "profesor": "Antonio"
+    }
+  ],
+  "segundo": [
+    {
+      "id": "Prog",
+      "modulo": "profesorsarrollo Web en Entorno Cliente",
+      "profesor": "Miguel Angel"
+    },
+    {
+      "id": 2,
+      "modulo": "profesorsarrollo Web en Entorno Servidor",
+      "profesor": "Antonio profesor la Rosa"
+    },
+    {
+      "id": 3,
+      "modulo": "Diseño profesor interfaces Web",
+      "profesor": "Alejandro Paniego"
+    },
+    {
+      "modulo": "viejo",
+      "profesor": "peperaaaaa",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "modulo": "Horas profesor libre configuración",
+      "profesor": "Alejandro Paniego"
+    },
+    {
+      "id": 6,
+      "modulo": "Empresa e iniciativa emprenprofesordora",
+      "profesor": "María Dolores"
+    }
+  ]
+}
